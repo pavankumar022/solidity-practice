@@ -1,27 +1,28 @@
-// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract VariableExamples {
- 
+contract VariableExamples{
+    uint public age=45;
+    int public temperatue=-10;
+    uint8 public smallNumber=255;
+    string public name="Alice";
+    bool public isActive=true;
+    
 
-    // Numbers
-    uint public age = 25;           // Positive whole number
-    int public temperature = -5;    // Can be negative
-    uint8 public smallNum = 255;    // 0 to 255
+    address public owner;
 
-    // Text
-    string public name = "Alice";   // Text data
-
-    // Boolean
-    bool public isActive = true;    // true or false
-
-    // Address
-    address public owner;           // Wallet address
-
-//inside functions 
-    function calculate() public pure returns (uint) {
-        uint temp = 10;           // Local variable
-        uint result = temp * 2;   // Another local variable
+    function calculate() public pure returns(uint){
+        uint temp=10;
+        uint result=temp*2;
+        return result;
+    }
+     function sum() public pure returns(uint){
+        uint temp=20;
+        uint result=temp+2;
+        return result;
+    }
+     function sub() public pure returns(uint){
+        uint temp=10;
+        uint result=temp-2;
         return result;
     }
 }
