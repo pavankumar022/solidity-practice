@@ -25,4 +25,15 @@ contract VariableExamples{
         uint result=temp-2;
         return result;
     }
+
+    function getglobalinfo() public view returns(uint){
+        uint mycurrentTime=block.timestamp;
+        return(mycurrentTime);
+    }
+
+    uint public blockTime;
+    function getCurrentTime() public{
+        blockTime=block.timestamp;
+    }
 }
+
